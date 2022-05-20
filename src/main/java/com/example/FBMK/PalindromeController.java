@@ -1,2 +1,4 @@
-package com.example.FBMK;public class PalindromeController {
+package com.example.FBMK;
+
+public class PalindromeController {
 }

@@ -13,6 +13,6 @@ public class CalculatorController {
 
     @PostMapping("/add")
     public Float add(@RequestBody AdditionRequest body){
-        return  1.0f;
+        return body.getA() + body.getB();
     }
 }

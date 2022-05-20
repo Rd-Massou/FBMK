@@ -12,14 +12,21 @@ public class CalculatorController {
 
 
     @PostMapping("/add")
+
+
     public Float add(@RequestBody OperationRequest body){
         return body.getA() + body.getB();
-    }
+      }
+
+    @PostMapping("/multiply")
+    public Float multiply(@RequestBody OperationRequest body){return body.getA()* body.getB();}
 
     @PostMapping("/divide")
     public Float divide(@RequestBody OperationRequest body){
         if(body.getB() == 0) throw new ArithmeticException("ERROR: divider is null");
         return body.getA() / body.getB();
     }
+
+    
 
 }

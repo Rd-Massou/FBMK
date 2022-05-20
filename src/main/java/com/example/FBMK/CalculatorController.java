@@ -23,7 +23,7 @@ public class CalculatorController {
 
     @PostMapping("/divide")
     public Float divide(@RequestBody OperationRequest body){
-        if(body.getB() == 0) throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"ERROR: divider is null");
+        if(body.getB() == 0) throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"ERROR: divisor is null");
         return body.getA() / body.getB();
     }
 }

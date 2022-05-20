@@ -27,6 +27,15 @@ public class CalculatorController {
         return body.getA() / body.getB();
     }
 
+    @PostMapping("/factorial")
+    public Integer factorial(@RequestBody OperationRequest body) {
+        int fact = 1;
+        for (int i = 1; i<=body.getFactNum(); i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+
     
 
 }

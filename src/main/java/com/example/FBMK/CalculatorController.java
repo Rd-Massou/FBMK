@@ -12,9 +12,10 @@ public class CalculatorController {
 
 
     @PostMapping("/add")
+
     public Float add(@RequestBody OperationRequest body){
-        return  1.0f;
-    }
+        return body.getA() + body.getB();
+      }
 
     @PostMapping("/multiply")
     public Float multiply(@RequestBody OperationRequest body){return body.getA()* body.getB();}
